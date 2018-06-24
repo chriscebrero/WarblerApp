@@ -1,7 +1,7 @@
 import {SET_CURRENT_USER} from "../actionTypes";
 
 const DEFAULT_STATE = {
-	isAuthenticated: false; // true when logged in
+	isAuthenticated: false, // true when logged in
 	user: {} //all user info when logged in
 };
 
