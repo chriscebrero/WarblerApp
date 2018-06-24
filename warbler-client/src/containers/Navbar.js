@@ -12,8 +12,23 @@ class Navbar extends Component {
 						<img src="" alt="warbler" />
 					</Link>
 				</div>
-
+				<ul className="nav navbar-nav navbar-right">
+					<li>
+						<Link to="/signup">Sign Up</Link>
+					</li>
+					<li>
+						<Link to="/signup">Sign Up</Link>
+					</li>
+				</ul>
 			</nav>
 		);
 	}
 }
+
+function mapStateToProps(state) {
+	return {
+		currentUser: state.currentUser
+	};
+}
+
+export default connect(mapStateToProps, null)(Navbar);
