@@ -34,7 +34,7 @@ class AuthForm extends Component {
             <form onSubmit={this.handleSubmit}>
               <h2>{heading}</h2>
               {errors.message && <div className="alert alert-danger">{errors.message}</div>
-              )}
+              }
               <label htmlFor="email">E-mail</label>
               <input
                 autoComplete="off"
