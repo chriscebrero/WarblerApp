@@ -15,6 +15,14 @@ class AuthForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleSubmit = e => {
+  	e.preventDefault();
+  	const authType = this.props.signUp ? "signup" : "signin";
+  	this.props.onAuth(authType, this.state).then(() => {
+  		console.log("Logged in successfully!");
+  	});
+  }
+
   render() {
     const { email, username, password, profileImageUrl } = this.state;
     const { signUp, heading, buttonText } = this.props;
