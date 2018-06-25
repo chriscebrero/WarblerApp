@@ -6,6 +6,8 @@ import AuthForm from "../components/AuthForm";
 import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import MessageList from "../containers/MessageList";
+import withAuth from "../hocs/withAuth";
+import MessageForm from "../containers/message"
 
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props;
@@ -50,7 +52,7 @@ const Main = props => {
             );
           }}
         />
-        <Route path="/users/:id/messages/new" component={MessageForm} />
+        <Route path="/users/:id/messages/new" component={withAuth(MessageForm)} />
       </Switch>
     </div>
   );
