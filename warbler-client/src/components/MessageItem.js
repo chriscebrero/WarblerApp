@@ -7,9 +7,7 @@ const MessageItem = ({
   date,
   profileImageUrl,
   text,
-  username,
-  removeMessage,
-  isCorrectUser
+  username
 }) => (
   <div>
     <li className="list-group-item">
