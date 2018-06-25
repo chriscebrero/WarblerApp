@@ -17,6 +17,7 @@ const Main = props => {
           render={props => {
             return (
               <AuthForm
+              	errors={errors}
               	onAuth={authUser}
                 buttonText="Log in"
                 heading="Welcome Back."
@@ -31,6 +32,7 @@ const Main = props => {
           render={props => {
             return (
               <AuthForm
+              	errors={errors}
               	onAuth={authUser}
                 signUp
                 buttonText="Sign me up!"
@@ -47,6 +49,7 @@ const Main = props => {
 
 function mapStateToProps(state) {
   return {
+  	currentUser: state.currentUser,
     errors: state.errors
   };
 }
