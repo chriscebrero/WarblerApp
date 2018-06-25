@@ -7,7 +7,7 @@ import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import MessageList from "../containers/MessageList";
 import withAuth from "../hocs/withAuth";
-import MessageForm from "../containers/message"
+import MessageForm from "../containers/MessageForm"
 
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props;
