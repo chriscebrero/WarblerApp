@@ -22,6 +22,14 @@ class MessageForm extends Component {
 				{this.props.errors}
 				</div>
 				)}
+				<input type="text" 
+				className="form-control" 
+				value={this.state.message}
+				onChange={e => this.setState({message: e.target.value})}
+				/>
+				<button type="submit" className="btn btn-success pull-right">
+				Add Message
+				</button>
 			</form>
 		);
 	}
