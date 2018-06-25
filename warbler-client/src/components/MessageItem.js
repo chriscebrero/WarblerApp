@@ -8,6 +8,7 @@ const MessageItem = ({
   profileImageUrl,
   text,
   username
+  removeMessage
 }) => (
   <div>
     <li className="list-group-item">
@@ -26,6 +27,8 @@ const MessageItem = ({
           </Moment>
         </span>
         <p>{text}</p>
+        <a className="btn btn-danger" onClick={removeMessage}>
+        </a>
       </div>
     </li>
   </div>
