@@ -9,16 +9,16 @@ export function setCurrentUser(user) {
   };
 }
 
-export function setAuthorizationToken(token){
+export function setAuthorizationToken(token) {
   setTokenHeader(token);
 }
 
 export function logout() {
   return dispatch => {
     localStorage.clear();
-    setAuthorizationToken(false);;
+    setAuthorizationToken(false);
     dispatch(setCurrentUser({}));
-  }
+  };
 }
 
 export function authUser(type, userData) {
